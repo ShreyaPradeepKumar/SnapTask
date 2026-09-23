@@ -1,0 +1,19 @@
+{
+  "name": "snaptask",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Turn information into calendar events.",
+  "type": "module",
+  "scripts": {
+    "build": "vite build && node scripts/copy-extension-files.mjs"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
+  }
+}

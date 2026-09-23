@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "SnapTask",
+  "version": "0.1.0",
+  "description": "Turn information into calendar events.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SnapTask"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "identity"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "oauth2": {
+    "client_id": "__SNAPTASK_GOOGLE_CLIENT_ID__",
+    "scopes": ["https://www.googleapis.com/auth/calendar.events"]
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self' https://www.googleapis.com"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
